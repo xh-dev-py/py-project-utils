@@ -29,7 +29,7 @@ def create_project(project_name, argv: [str]):
             with open(f"{fp}__", "wt") as fout:
                 for line in fin:
                     fout.write(line.replace("___project_name___", project_name_for_replacing))
-        if os.path.exit(fp):
+        if os.path.exist(fp):
             os.remove(fp)
         shutil.move(f"{fp}__", fp)
     print("Project initializing complete")
