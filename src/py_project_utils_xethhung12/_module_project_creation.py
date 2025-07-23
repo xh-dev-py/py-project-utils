@@ -1,8 +1,10 @@
 import sys
 import shutil
 import os
+import stat
 import importlib.resources as resources
 import py_project_utils_xethhung12 as py_project
+import platform
 def create_project(project_name):
     resourcePath=resources.files("py_project_utils_xethhung12.data")
     base = str(resourcePath._paths[0])
@@ -35,4 +37,15 @@ def create_project(project_name):
         if os.path.exists(fp):
             os.remove(fp)
         shutil.move(f"{fp}__", fp)
+
+        if fp.endswith(".sh"):
+            if platform.system() == 'Windows':
+                pass
+            else:  # Linux/Unix-like systems
+                current_permissions = os.stat(fp).st_mode
+                new_permissions = current_permissions | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH
+                # Apply the new permissions
+                os.chmod(fp, new_permissions)
+                print(f"File '{fp}' made executable (chmod +x).")
+
     print("Project initializing complete")
