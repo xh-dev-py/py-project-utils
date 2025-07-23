@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "py_project_utils_xethhung12"
-version = "0.0.4"
+version = "0.0.5"
 description = "A small package targeting to help on python project packaging process"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -20,7 +20,7 @@ Homepage = "https://github.com/xh-dev-py/py-project-utils"
 Issues = "https://github.com/xh-dev-py/py-project-utils/issues"
 
 [project.scripts]
-py-project-utils = "py_project_utils_xethhung12.cmd.run:main"
+py-project-utils = "py_project_utils_xethhung12._cmd.run:main"
 
 [tool.hatch.build.targets.wheel]
 packages = [ "src/py_project_utils_xethhung12",]

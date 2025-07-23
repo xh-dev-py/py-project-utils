@@ -3,7 +3,7 @@ import shutil
 import os
 import importlib.resources as resources
 import py_project_utils_xethhung12 as py_project
-def create_project(project_name, argv: [str]):
+def create_project(project_name):
     resourcePath=resources.files("py_project_utils_xethhung12.data")
     base = str(resourcePath._paths[0])
     data = list(resourcePath.iterdir())
@@ -28,7 +28,10 @@ def create_project(project_name, argv: [str]):
         with open(fp, "rt") as fin:
             with open(f"{fp}__", "wt") as fout:
                 for line in fin:
-                    fout.write(line.replace("___project_name___", project_name_for_replacing))
+                    fout.write(line\
+                        .replace("___project_name___", project_name_for_replacing)\
+                        .replace("___project_cmd_name___", project_name_for_replacing.replace("_","-"))
+                        )
         if os.path.exists(fp):
             os.remove(fp)
         shutil.move(f"{fp}__", fp)

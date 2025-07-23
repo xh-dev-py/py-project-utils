@@ -27,5 +27,5 @@ Issues = "https://github.com/pypa/sampleproject/issues"
 packages = ["src/___project_name___"]
 
 [project.scripts]
-py-project-built-cmd="___project_name___.cmd.run:main"
+___project_cmd_name___="___project_name___._cmd.run:main"
 
