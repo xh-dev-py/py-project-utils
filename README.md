@@ -35,6 +35,10 @@ Base on current version, update the patch number with dev id
 `python -m xh_py_project_versioning --patch` \
 In case current version is `0.0.1`, the updated version will be `0.0.2-dev+000` 
 
+To prompt the dev version to official version use command.
+`python -m xh_py_project_versioning -r`.
+Through the command, version `0.0.2-dev+000` will be prompt to `0.0.2` official versioning.
+
 Base on current version, update the patch number directly
 `python -m xh_py_project_versioning --patch -d` \
 In case current version is `0.0.1`, the updated version will be `0.0.2` 
