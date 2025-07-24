@@ -1,5 +1,5 @@
 import ___project_name___ as project
-from j_vault_http_client_xethhung12 import jvault_http_client
+from j_vault_http_client_xethhung12 import client
 def main():
-    jvault_http_client.load_to_env()
+    client.load_to_env()
     project.hello("user")
