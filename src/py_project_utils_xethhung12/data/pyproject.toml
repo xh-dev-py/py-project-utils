@@ -19,7 +19,7 @@ classifiers = [
 license = "GPL-3.0-only"
 license-files = ["LICEN[CS]E*"]
 dependencies = [
-    "j_vault_http_client_xethhung12"
+    "j-vault-http-client-xethhung12"
 ]
 
 [project.urls]

@@ -14,7 +14,7 @@ license-files = [ "LICEN[CS]E*",]
 [[project.authors]]
 name = "Xeth Hung"
 email = "admin@xethh.me"
-dependencies = [ "j_vault_http_client_xethhung12",]
+dependencies = [ "j-vault-http-client-xethhung12" ]
 
 [project.urls]
 Homepage = "https://github.com/xh-dev-py/py-project-utils"
