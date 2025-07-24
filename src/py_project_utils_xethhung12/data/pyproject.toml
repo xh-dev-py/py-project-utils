@@ -18,6 +18,9 @@ classifiers = [
 ]
 license = "GPL-3.0-only"
 license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "j_vault_http_client_xethhung12"
+]
 
 [project.urls]
 Homepage = "https://github.com/pypa/sampleproject"
