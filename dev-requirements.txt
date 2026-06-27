@@ -1,4 +1,4 @@
 hatchling
 build
 twine
-xh-py-project-versioning
+xh-py-project-versioning>=0.2.0
